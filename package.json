@@ -1,0 +1,32 @@
+{
+  "name": "webphone-cmh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloAPrata/CloudVoiceOne.git"
+  },
+  "author": "Pablo Almeida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloAPrata/CloudVoiceOne/issues"
+  },
+  "homepage": "https://github.com/PabloAPrata/CloudVoiceOne#readme",
+  "dependencies": {
+    "axios": "^1.2.4",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "janus-client": "^1.0.4",
+    "rxjs": "^7.8.0",
+    "socket.io": "^4.5.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
