@@ -4,20 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Webchat</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/voice.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/image/DALL·E 2023-01-19 20.57.48 - A chat icon with an owl.png"
+    />
   </head>
-  <body></body>
+  <body>
+    <aside id="sidebar" class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <div class="logo_name">Webchat</div>
+        </div>
+        <button id="side_menu_btn">
+          <span class="material-icons"> menu </span>
+        </button>
+      </div>
+      <ul id="aside_buttons" class="nav_list">
+        <li>
+          <button id="chat_button" class="active">
+            <a href="#">
+              <span class="material-icons"> chat_bubble </span>
+              <span class="links_name"> Conversas </span>
+            </a>
+          </button>
+          <span class="tooltip">Conversas</span>
+        </li>
+        <li>
+          <button id="call_button">
+            <a href="#">
+              <span class="material-icons"> videocam </span>
+              <span class="links_name"> Chamadas </span>
+            </a>
+          </button>
+          <span class="tooltip">Chamadas</span>
+        </li>
+      </ul>
 
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
-  <script src=""></script>
+      <div class="profile_content">
+        <div class="profile">
+          <div class="profile_details">
+            <img src="../images/user-3296.svg" alt="" />
+            <div class="name_container">
+              <div id="profile_name" class="name"></div>
+              <div class="job">Desenvolvedor</div>
+            </div>
+          </div>
+          <span id="logout" class="material-icons"> logout </span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="app">
+      <div id="app_chat_container" class="app_chat_container"></div>
+
+      <div id="app_call_container" class="app_call_container">
+        <div class="container_phone"></div>
+        <div class="container_incall"></div>
+      </div>
+    </main>
+    <audio id="sound_new_message" src="../sounds/new_message.mp3"></audio>
+
+    <script src="../scripts/socket.io/client-dist/socket.io.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <script src="../scripts/global.js" type="module"></script>
+    <script src="../scripts/voice.js"></script>
+    <script src="../scripts/chat.js"></script>
+    <script src="../scripts/websocket.js"></script>
+  </body>
 </html>

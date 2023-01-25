@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Variáveis */
+
+.dark-mode:root {
+  --dark-mode-bg-color: rgb(40, 40, 40);
+  --dark-mode-bg-input: rgb(25, 25, 25);
+  --dark-mode-placeholder: #818181;
+  --dark-mode-icons: rgb(139, 139, 139);
+  --dark-mode-icon-selected: rgb(88, 101, 242);
+  --dark-mode-chat-selected: rgb(60 60 60);
+  --dark-mode-chat-hover: rgb(39, 39, 39);
+  --dark-mode-self-msg: #5865f2;
+  --dark-mode-text: white;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(33, 33, 33) rgb(33, 33, 33);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(129 129 129);
+  border-radius: 10px;
+}
+
+.app_chat_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  background: #fff;
+  z-index: 2;
+}
+
+.app_call_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+}

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: rgb(88, 101, 242);
+  background: radial-gradient(
+    circle,
+    rgb(46 52 116) 0%,
+    rgba(6, 40, 56, 1) 100%,
+    rgba(72, 102, 117, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-login {
+  width: 416px;
+  min-width: 340px;
+  background-color: #ffffff;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  border-radius: 6px;
+  color: rgb(0, 0, 0);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 32px;
+}
+
+.container-login {
+  /* height: 100%; */
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+}
+
+.header img {
+  margin-bottom: 8px;
+  height: 115px;
+}
+
+.form-login {
+  margin-top: 20px;
+}
+
+.container-input {
+  margin-top: 20px;
+}
+
+.welcome-login label {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: black;
+  width: 100%;
+}
+
+.text-input {
+  background-color: #ffffff;
+  outline: none;
+  width: 97%;
+  color: black;
+  border: transparent;
+  border-radius: 4px;
+  height: 20px;
+  padding-left: 10px;
+  height: 43px;
+  border: solid black;
+}
+
+.container-label {
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left !important;
+  width: 100%;
+}
+
+.login-button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #4169e1;
+  height: 45px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color 0.17s ease, color 0.17s ease;
+}
+
+.login-button:hover {
+  background-color: #67a7ae;
+}
+
+.sub-submit {
+  margin-top: 10px;
+  color: rgb(163, 166, 170);
+  text-align: left;
+}
+
+.sub-submit a {
+  margin-left: 5px;
+  color: #01aef4;
+  text-decoration: none;
+}
+
+.sub-submit a:hover {
+  color: #01aef4;
+  text-decoration: underline;
+}
+
+@media (max-width: 485px) {
+  body {
+    background-color: #36393e;
+    background-image: inherit;
+    align-items: start;
+  }
+
+  .welcome-login {
+    min-width: inherit;
+    width: 100%;
+    padding: 0px;
+    padding: 40% 0px 0px 0px;
+    box-shadow: inherit;
+  }
+
+  form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sub-submit {
+    margin-left: 20px;
+  }
+}
