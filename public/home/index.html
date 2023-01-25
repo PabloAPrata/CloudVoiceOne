@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webchat</title>
+    <title>CloudVoiceOne</title>
 
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/voice.css" />
     <link rel="stylesheet" href="../css/chat.css" />
 
     <link
@@ -25,13 +26,22 @@
     <aside id="sidebar" class="sidebar">
       <div class="logo_content">
         <div class="logo">
-          <div class="logo_name">Webchat</div>
+          <div class="logo_name">CloudVoiceOne</div>
         </div>
         <button id="side_menu_btn">
           <span class="material-icons"> menu </span>
         </button>
       </div>
       <ul id="aside_buttons" class="nav_list">
+        <li>
+          <button id="call_button">
+            <a href="#">
+              <span class="material-icons"> phone </span>
+              <span class="links_name"> Chamadas </span>
+            </a>
+          </button>
+          <span class="tooltip">Chamadas</span>
+        </li>
         <li>
           <button id="chat_button" class="active">
             <a href="#">
@@ -41,15 +51,6 @@
           </button>
           <span class="tooltip">Conversas</span>
         </li>
-        <li>
-          <button id="call_button">
-            <a href="#">
-              <span class="material-icons"> videocam </span>
-              <span class="links_name"> Chamadas </span>
-            </a>
-          </button>
-          <span class="tooltip">Chamadas</span>
-        </li>
       </ul>
 
       <div class="profile_content">
@@ -57,7 +58,7 @@
           <div class="profile_details">
             <img src="../images/user-3296.svg" alt="" />
             <div class="name_container">
-              <div id="profile_name" class="name"></div>
+              <div id="profile_name" class="name">Pablo Prata</div>
               <div class="job">Desenvolvedor</div>
             </div>
           </div>
@@ -70,7 +71,98 @@
       <div id="app_chat_container" class="app_chat_container"></div>
 
       <div id="app_call_container" class="app_call_container">
-        <div class="container_phone"></div>
+        <div class="container_phone">
+          <header class="header_page">
+            <span class="icon_page"
+              ><span class="material-icons"> phone </span></span
+            ><span class="title_page">Chamadas</span>
+          </header>
+          <div class="body_voice">
+            <section class="section_numberpad">
+              <div class="section-chamadas">
+                <div class="input-area-chamadas">
+                  <input
+                    id="output"
+                    type="text"
+                    placeholder="Digite um número"
+                    autocomplete="off"
+                  />
+                </div>
+
+                <div class="number-pad">
+                  <div>
+                    <div class="number-pad-section">
+                      <div id="one" class="number-number-pad-box">
+                        <div class="number-number-pad">1</div>
+                      </div>
+                      <div id="two" class="number-number-pad-box">
+                        <div class="number-number-pad">2</div>
+                      </div>
+                      <div id="three" class="number-number-pad-box">
+                        <div class="number-number-pad">3</div>
+                      </div>
+                    </div>
+                    <div class="number-pad-section">
+                      <div id="four" class="number-number-pad-box">
+                        <div class="number-number-pad">4</div>
+                      </div>
+                      <div id="five" class="number-number-pad-box">
+                        <div class="number-number-pad">5</div>
+                      </div>
+                      <div id="six" class="number-number-pad-box">
+                        <div class="number-number-pad">6</div>
+                      </div>
+                    </div>
+                    <div class="number-pad-section">
+                      <div id="seven" class="number-number-pad-box">
+                        <div class="number-number-pad">7</div>
+                      </div>
+                      <div id="eight" class="number-number-pad-box">
+                        <div class="number-number-pad">8</div>
+                      </div>
+                      <div id="nine" class="number-number-pad-box">
+                        <div class="number-number-pad">9</div>
+                      </div>
+                    </div>
+                    <div class="number-pad-section">
+                      <div id="asterisk" class="number-number-pad-box">
+                        <div class="number-number-pad">*</div>
+                      </div>
+                      <div id="zero" class="number-number-pad-box">
+                        <div class="number-number-pad">0</div>
+                      </div>
+                      <div id="hash" class="number-number-pad-box">
+                        <div class="number-number-pad">#</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="callAudioBtn" class="call-btn-chamadas">
+                  <div id="" class="icon-btn-chamar">
+                    <div>Chamar</div>
+                  </div>
+                </div>
+              </div>
+              <div class="usuario-numero-container">
+                <div class="usuario-numero-label">Seu número:</div>
+                <div class="recebe-numero-usuario">
+                  <label id="myNumber" style="text-align: center">104</label>
+                </div>
+              </div>
+            </section>
+            <div class="container_historicos_contatos">
+              <section class="section_historico">
+                <header class="header_historico">Histórico</header>
+                <ul id="list_historico_call"></ul>
+              </section>
+              <section class="section_contatos">
+                <header class="header_contatos">Contatos</header>
+                <ul id="list_contatos_call"></ul>
+              </section>
+            </div>
+          </div>
+        </div>
         <div class="container_incall"></div>
       </div>
     </main>

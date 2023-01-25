@@ -1,6 +1,7 @@
 import { ajax } from "./ajax.js";
 
-let opaqueId = `siptest-${Janus.randomString(12)}`;
+// let opaqueId = `siptest-${Janus.randomString(12)}`;
+let opaqueId = `siptest-${generateRandomString(12)}`;
 let sipcall = null;
 let authorization = {};
 const token = localStorage.getItem("auth");
@@ -26,6 +27,7 @@ function getAuthorization() {
       accountInfo.ramal = authorization.ramal;
       accountInfo.name = authorization.label;
       console.log(authorization);
+      startProgram(token);
     },
     erro(erro) {
       console.log(erro);
@@ -38,6 +40,12 @@ function startProgram(token) {
     alert("Sua sessão expirou! error: 000");
     window.location.href = "/login";
   }
+
+  //   while (!authorization) {
+  //     startProgram(token);
+  //   }
+
+  //   initAudioJanus(authorization);
 }
 
 function initAudioJanus(authorization) {
@@ -156,14 +164,61 @@ function initAudioJanus(authorization) {
                       " " +
                       result["reason"]
                   );
+                  alert("Houve um problema. Error: 003");
                 }
 
-                alert("Houve um problema. Error: 003");
+                if (event === "registered") {
+                  console.log(
+                    "Successfully registered as " + result["username"] + "!"
+                  );
+                  Janus.log(
+                    "Successfully registered as " + result["username"] + "!"
+                  );
+                  alert(
+                    "Successfully registered as " + result["username"] + "!"
+                  );
 
-                // removeHelper(helperId)
+                  //TODO Enable buttons to call now
+
+                  if (!registered) {
+                    registered = true;
+                    masterId = result["master_id"];
+                  }
+                } else if (event === "calling") {
+                  // Janus.log();
+                  //TODO Any ringtone?
+                } else if (event === "incomingcall") {
+                } else if (event === "accepting") {
+                } else if (event === "progress") {
+                } else if (event === "accepted") {
+                } else if (event === "message") {
+                } else if (event === "info") {
+                } else if (event === "notify") {
+                } else if (event === "transfer") {
+                } else if (event === "proceeding") {
+                } else if (event === "hangup") {
+                  if (result["code"] == "487") {
+                  }
+                  if (result["code"] == "404") {
+                  }
+                  if (result["code"] == "484") {
+                  }
+                  if (result["code"] == "480") {
+                  }
+                  if (result["code"] == "486") {
+                  }
+                  if (result["code"] == "200") {
+                  }
+                }
               }
             },
+            onlocaltrack: function (track, on) {},
+            onremotetrack: function (track, mid, on) {},
+            oncleanup: function () {},
           });
+        },
+        error: function (error) {
+          console.log(error);
         },
       });
     },
@@ -192,6 +247,17 @@ function registerUsername(authorization) {
   register["secret"] = password;
 
   sipcall.send({ message: register });
+}
+
+function generateRandomString(length) {
+  let result = "";
+  let characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let charactersLength = characters.length;
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 }
 
 getAuthorization();

@@ -52,3 +52,5 @@ function openChatApp() {
   });
   chat_button.classList.add("active");
 }
+
+openVideoApp();

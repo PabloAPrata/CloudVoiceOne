@@ -1,0 +1,193 @@
+.container_phone {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+}
+
+.header_page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-left: 2rem;
+  background: #f5f5f5;
+  pointer-events: none;
+}
+
+.header_page .material-icons {
+  color: white;
+  pointer-events: none;
+}
+
+.header_page .icon_page {
+  height: 3.2rem;
+  width: 3.2rem;
+  margin: 0 1.4rem 0 0;
+  border-radius: 0.5rem;
+  background: #5b5fc7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_page .title_page {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+}
+
+.body_voice {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  background: white;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-top: 0px;
+}
+
+.body_voice .section_numberpad {
+  min-width: 28rem;
+  max-width: 28rem;
+  height: 100%;
+  border-right: solid rgb(240, 240, 240) 0.1rem;
+}
+
+/* ================================================================ */
+
+.section-chamadas {
+  user-select: none;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  margin-bottom: 2.4rem rem;
+}
+
+.number-pad {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.number-pad-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.number-number-pad-box {
+  background-color: rgb(237 237 237);
+  padding: 1rem;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 200;
+  font-size: 2.25rem;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 1%), 0 1px 1px 0 rgb(0 0 0 / 17%);
+}
+
+.input-area-chamadas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-chamadas input {
+  width: 85%;
+  border: 1px solid transparent;
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 1%), 0 1px 1px 0 rgb(0 0 0 / 17%);
+  font-family: "Roboto", sans-serif !important;
+  font-size: 12px !important;
+  line-height: normal !important;
+
+  padding-left: 1.2rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1.2rem;
+  padding-top: 0.5rem;
+  outline-style: none;
+  border-bottom-width: 0px;
+  color: rgb(66, 66, 66);
+}
+
+.call-btn-chamadas {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn-chamar {
+  background-color: #5b5fc6;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+  width: 90%;
+  min-height: 3.2rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 4px 0px rgb(0 0 0 / 50%), 0 1px 0px 0 rgb(0 0 0 / 10%);
+  transition: background-color 0.17s ease, color 0.17s ease;
+}
+
+.usuario-numero-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.usuario-numero-label {
+  margin: 0px 5px;
+}
+
+/* ================================================================ */
+
+.container_historicos_contatos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.section_historico {
+  width: 100%;
+  border-right: solid rgb(240, 240, 240) 0.1rem;
+  padding-left: 2rem;
+}
+
+.section_contatos {
+  min-width: 32rem;
+  max-width: 32rem;
+  padding-left: 0.605rem;
+}
+
+.header_historico {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: solid rgb(240, 240, 240) 0.1rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header_contatos {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  border-bottom: solid rgb(240, 240, 240) 0.1rem;
+  font-size: 14px;
+  font-weight: 400;
+}
